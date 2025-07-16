@@ -1,5 +1,5 @@
 .footer {
-  width: 100%;
+  width: calc(100% - 220px);
   height: 56px;
   background: #222;
   color: #fff;
@@ -9,6 +9,8 @@
   justify-content: center;
   font-size: 1rem;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.07);
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  left: 220px;
+  bottom: 0;
+  z-index: 100;
 }
