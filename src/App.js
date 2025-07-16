@@ -1,80 +1,32 @@
 
 import React, { useState } from 'react';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
 import './TodoApp.css';
 
 function App() {
-  // Step 1: State for the list of todos
-  const [todos, setTodos] = useState([]);
-  // Step 1: State for the input value
-  const [input, setInput] = useState("");
-
-  // Step 2: Handler for form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (input.trim() === "") return;
-    setTodos([...todos, { text: input, completed: false }]);
-    setInput("");
-  };
-
-  // Step 4: Handler to toggle completed state
-  const toggleTodo = (idx) => {
-    setTodos(
-      todos.map((t, i) =>
-        i === idx ? { ...t, completed: !t.completed } : t
-      )
-    );
-  };
-
-  // Step 5: Handler to delete a todo
-  const deleteTodo = (idx) => {
-    setTodos(todos.filter((_, i) => i !== idx));
-  };
-
+  // Layout Skeleton: Sidebar | Header | Main Container | Footer
   return (
-    <div className="app-container">
-      <h1 className="todo-header">Todo App</h1>
-      {/* Step 2: Form to add new todo */}
-      <form className="todo-form" onSubmit={handleSubmit}>
-        <input
-          className="todo-input"
-          type="text"
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          placeholder="Add a new todo"
-        />
-        <button className="add-btn" type="submit">Add</button>
-      </form>
-      {/* Step 3: Display the list of todos */}
-      <ul className="todo-list">
-        {todos.map((todo, idx) => (
-          <li className="todo-item" key={idx}>
-            {/* Step 4: Click to toggle completed */}
-            <span
-              className={`todo-text${todo.completed ? ' completed' : ''}`}
-              onClick={() => toggleTodo(idx)}
-              title="Click to mark as completed"
-            >
-              {todo.text}
-            </span>
-            {/* Step 5: Delete button */}
-            <button
-              className="delete-btn"
-              onClick={() => deleteTodo(idx)}
-              title="Delete todo"
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
-      {/*
-        Step-by-step summary:
-        1. useState for todos and input (state management)
-        2. Form for adding todos (controlled input, form handling)
-        3. List rendering with map (display todos)
-        4. Click to toggle completed (event handling, conditional styling)
-        5. Delete button (array manipulation, event handling)
-      */}
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#f7f7f7' }}>
+      {/* Sidebar: standard width 220px */}
+      <Sidebar />
+      <div style={{ flex: 1, marginLeft: '220px', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        {/* Header: standard height 64px */}
+        <div style={{ height: '64px' }}>
+          <Header />
+        </div>
+        {/* Main Container: max-width 700px, centered */}
+        <main style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'flex-start', padding: '2rem 0' }}>
+          <div className="app-container" style={{ maxWidth: '700px', width: '100%', background: '#fff', borderRadius: '10px', boxShadow: '0 2px 12px rgba(0,0,0,0.08)', padding: '2.5rem', minHeight: '350px', margin: '0 auto' }}>
+            {/* Main Container Skeleton */}
+          </div>
+        </main>
+        {/* Footer: standard height 56px */}
+        <div style={{ height: '56px' }}>
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }

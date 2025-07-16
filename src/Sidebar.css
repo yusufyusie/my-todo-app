@@ -1,0 +1,27 @@
+.sidebar {
+  width: 220px;
+  background: #f0f4f8;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.04);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar nav ul li {
+  margin-bottom: 1.2rem;
+}
+.sidebar nav ul li a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.sidebar nav ul li a:hover {
+  color: #0056b3;
+}
