@@ -1,3 +1,44 @@
+/* Layout styles moved from Layout.css */
+.layout-root {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+
+.layout-main {
+  flex: 1;
+  margin-left: 220px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-header {
+  height: 64px;
+}
+
+.layout-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+.app-container {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2.5rem;
+  min-height: 350px;
+  margin: 0 auto;
+}
+
+.layout-footer {
+  height: 56px;
+}
 .App {
   text-align: center;
 }
