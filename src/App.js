@@ -1,31 +1,48 @@
 
-import React, { useState } from 'react';
+import React from 'react';
+
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import Home from './Home';
+import Todos from './Todos';
+import Profile from './Profile';
 import './TodoApp.css';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
-  // Layout Skeleton: Sidebar | Header | Main Container | Footer
+
   return (
-    <div className="layout-root">
-      <Sidebar />
-      <div className="layout-main">
-        <div className="layout-header">
-          <Header />
-        </div>
-        <main className="layout-content">
-          <div className="app-container">
-            {/* Main Container Skeleton */}
+    <BrowserRouter>
+      <div className="layout-root">
+        <Sidebar />
+        <div className="layout-main">
+          <div className="layout-header">
+            <Header />
           </div>
-        </main>
-        <div className="layout-footer">
-          <Footer />
+          <main className="layout-content">
+            <div className="app-container">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/todos" element={<Todos />} />
+                <Route path="/profile" element={<Profile />} />
+              </Routes>
+            </div>
+          </main>
+          <div className="layout-footer">
+            <Footer />
+          </div>
         </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
+
 export default App;
+// - Routing: BrowserRouter, Routes, and Route provide SPA navigation
+// - Layout: Sidebar, Header, Main Container, Footer for a professional look
+// - Scalability: Easy to add more pages, features, or navigation
+// - Clean code: Comments explain logic, flow, and structure for learning and reference

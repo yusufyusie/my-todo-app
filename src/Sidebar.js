@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
 function Sidebar() {
@@ -6,9 +7,9 @@ function Sidebar() {
     <aside className="sidebar">
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Todos</a></li>
-          <li><a href="#">Profile</a></li>
+          <li><NavLink to="/" end>Home</NavLink></li>
+          <li><NavLink to="/todos">Todos</NavLink></li>
+          <li><NavLink to="/profile">Profile</NavLink></li>
         </ul>
       </nav>
     </aside>
