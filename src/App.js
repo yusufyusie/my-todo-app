@@ -4,10 +4,10 @@ import React from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
-import Home from './Home';
-import Todos from './Todos';
-import Profile from './Profile';
-import './TodoApp.css';
+import Home from './pages/Home';
+import Todos from './pages/Todos';
+import Profile from './pages/Profile';
+import './styles/TodoApp.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
