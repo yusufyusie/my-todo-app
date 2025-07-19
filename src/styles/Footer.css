@@ -1,3 +1,4 @@
+
 .footer {
   width: calc(100% - 220px);
   height: 56px;
@@ -15,26 +16,22 @@
   z-index: 100;
   font-family: var(--font-main);
   padding: 0 0 0 1rem;
-  overflow-x: auto;
 }
+
 .footer-left {
-  text-align: left;
-  flex: none;
   white-space: nowrap;
 }
+
 .footer-right {
-  text-align: right;
-  flex: none;
-  margin-right: 0.2rem;
   white-space: nowrap;
-  overflow: visible;
+  margin-right: 2.8rem;
 }
+
 .footer-link {
   color: #8d6748;
   text-decoration: underline;
   font-weight: 500;
   transition: color 0.2s;
-  padding-right: 0;
 }
 .footer-link:hover {
   color: var(--primary-dark);

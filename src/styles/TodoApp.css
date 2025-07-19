@@ -10,7 +10,6 @@
   font-family: var(--font-main);
 }
 
-
 .todo-header {
   margin-top: 2rem;
   font-size: 2rem;
@@ -19,13 +18,11 @@
   letter-spacing: 0.5px;
 }
 
-
 .todo-form {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
-
 
 .todo-input {
   padding: 0.5rem;
@@ -35,7 +32,6 @@
   width: 220px;
   font-family: var(--font-main);
 }
-
 
 .add-btn {
   padding: 0.5rem 1.2rem;

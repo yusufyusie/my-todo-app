@@ -76,12 +76,12 @@
   width: 100%;
   box-sizing: border-box;
 }
-.sidebar nav ul li a:hover, .sidebar nav ul li a.active {
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
   background: var(--primary);
   color: var(--text-light);
   box-shadow: 0 2px 8px rgba(141,103,72,0.10);
 }
-
 .sidebar-footer {
   width: 100%;
   text-align: center;

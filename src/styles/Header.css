@@ -18,29 +18,29 @@
   font-family: var(--font-main);
   border-bottom: 1.5px solid #e0b07a33;
 }
+
 .header-title {
   flex: 1 1 120px;
   text-align: center;
   font-size: 1.35em;
   font-weight: 700;
-  letter-spacing: 0.5px;
   min-width: 80px;
   max-width: 60vw;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .header-actions {
   min-width: 160px;
-  text-align: right;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+
 .header-welcome {
   font-size: 1.1rem;
   opacity: 0.85;
   white-space: nowrap;
-  overflow: visible;
   color: var(--text-light);
 }
