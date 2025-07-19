@@ -1,15 +1,16 @@
 
+
 .footer {
   width: calc(100% - 220px);
   height: 56px;
-  background: #f7f3ef;
-  color: #8d6748;
+  background: var(--background);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 0.98rem;
   box-shadow: 0 -2px 8px rgba(141,103,72,0.06);
-  border-top: 1.5px solid #e0b07a33;
+  border-top: 1.5px solid var(--accent);
   position: fixed;
   left: 220px;
   bottom: 0;
@@ -27,8 +28,9 @@
   margin-right: 2.8rem;
 }
 
+
 .footer-link {
-  color: #8d6748;
+  color: var(--primary);
   text-decoration: underline;
   font-weight: 500;
   transition: color 0.2s;
