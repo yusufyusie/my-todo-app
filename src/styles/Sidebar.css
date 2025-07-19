@@ -1,27 +1,95 @@
+
 .sidebar {
   width: 220px;
-  background: #f0f4f8;
-  padding: 2rem 1rem;
+  background: linear-gradient(180deg, #f7f3ef 0%, #e0b07a22 100%);
+  padding: 2.5rem 1.2rem 1.2rem 1.2rem;
   min-height: 100vh;
-  box-shadow: 2px 0 6px rgba(0,0,0,0.04);
+  box-shadow: 2px 0 16px rgba(141,103,72,0.08);
   position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
+  font-family: var(--font-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+.sidebar-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(141,103,72,0.13);
+  margin-bottom: 0.7rem;
+}
+.sidebar-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sidebar-username {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 0.2rem;
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+.sidebar-role {
+  font-size: 0.95rem;
+  color: #8d6748;
+  background: #e0b07a33;
+  border-radius: 8px;
+  padding: 0.15rem 0.7rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
 }
 .sidebar nav ul {
   list-style: none;
   padding: 0;
+  width: 100%;
 }
 .sidebar nav ul li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
 }
 .sidebar nav ul li a {
-  color: #007bff;
+  display: block;
+  color: var(--primary-dark);
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.2s;
+  font-size: 1.08rem;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  transition: background 0.18s, color 0.18s;
+  letter-spacing: 0.01em;
+  width: 100%;
+  box-sizing: border-box;
 }
-.sidebar nav ul li a:hover {
-  color: #0056b3;
+.sidebar nav ul li a:hover, .sidebar nav ul li a.active {
+  background: var(--primary);
+  color: var(--text-light);
+  box-shadow: 0 2px 8px rgba(141,103,72,0.10);
+}
+
+.sidebar-footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.93rem;
+  color: #8d6748;
+  padding: 1.2rem 0 0.2rem 0;
+  border-top: 1px solid #e0b07a33;
+  margin-top: 2rem;
+  letter-spacing: 0.01em;
+  background: transparent;
 }

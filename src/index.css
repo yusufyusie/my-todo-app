@@ -1,13 +1,28 @@
+
+/* Modern global theme and font setup */
+:root {
+  --primary: #8d6748;
+  --primary-dark: #5c432a;
+  --accent: #e0b07a;
+  --background: #f7f3ef;
+  --surface: #fff;
+  --text-main: #2d2217;
+  --text-light: #fff;
+  --border-radius: 12px;
+  --shadow: 0 2px 12px rgba(141,103,72,0.10);
+  --font-main: 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-main);
+  background: var(--background);
+  color: var(--text-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
 }
